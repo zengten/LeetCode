@@ -1,0 +1,9 @@
+# 备份常用命令
+## 根据id生成题目
+python python/scripts/get_problem.py -id=1
+# 本地测试python代码，注意包路径
+python3 python/test.py
+# 本地测试java代码，需要修改题目编号
+mvn test -Dtest="qubhjava.test.TestMain"
+## 提交代码，使用java代码，也可以使用typescript，py
+python python/scripts/submit.py java -id=1

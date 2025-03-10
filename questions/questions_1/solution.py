@@ -7,5 +7,10 @@ class Solution(solution.Solution):
         return self.twoSum(*test_input)
 
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        pass
+        dict = {}
+        for i in range(len(nums)):
+            if target - nums[i] in dict:
+                return [dict[target - nums[i]], i]
+            dict[nums[i]] = i
+        return []
 
